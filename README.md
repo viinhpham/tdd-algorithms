@@ -5,4 +5,4 @@ Algorithms with Test Driven Development
 
 Run
 
-`./gradlew test`
+`./gradlew clean test`
