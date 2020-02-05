@@ -1,11 +1,9 @@
-package org.vinh.guthriSequence;
+package org.vinh.guthrie;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.vinh.AbstractTest;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created by vinh.phamquoc on 2/5/20

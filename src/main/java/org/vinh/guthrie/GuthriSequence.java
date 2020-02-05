@@ -1,4 +1,4 @@
-package org.vinh.guthriSequence;
+package org.vinh.guthrie;
 
 /**
  * Created by vinh.phamquoc on 2/5/20
