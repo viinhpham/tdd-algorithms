@@ -25,7 +25,7 @@ public class TenFactor {
 	}
 
 	private int findMatchedSubtract(int firstFactor, int factorN, int n) {
-		for (int i = 1; i < n - 1; i++) {
+		for (int i = n-1; i > 0; i--) {
 			if (firstFactor == factorN - calculateFactor(i)) {
 				return i;
 			}
