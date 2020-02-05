@@ -4,7 +4,7 @@ package org.vinh.stantonMeasure;
  * Created by vinh.phamquoc on 2/5/20
  */
 public class StantonMeasure {
-	public int stantonMesure(int... array) {
+	public int stantonMeasure(int... array) {
 		if (array.length == 0) {
 			return 0;
 		}
