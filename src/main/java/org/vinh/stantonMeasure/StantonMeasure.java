@@ -8,26 +8,31 @@ public class StantonMeasure {
 		if (array.length == 0) {
 			return 0;
 		}
-		if (array.length ==1 &&  (array[0] == 1 || array[0] == 0)) {
+		if (array.length == 1 && (array[0] == 1 || array[0] == 0)) {
 			return 1;
 		}
 		int nextToCount = 1;
 		int countResult;
-		boolean canCountMore = true;
-		while (canCountMore) {
-			canCountMore = false;
-			countResult = 0;
-			//find number of 1s call n
-			for (int i : array) {
-				if (i == nextToCount) {
-					countResult++;
-					canCountMore = true;
-				}
-			}
+		while (true) {
+			//find number of 1s call nextToCount
+			countResult = countNextStanton(nextToCount, array);
+
 			if (countResult > 0) {
 				nextToCount = countResult;
+			} else {
+				return nextToCount;
 			}
 		}
-		return nextToCount;
+	}
+
+	private int countNextStanton(int nextToCount, int[] array) {
+		int countResult = 0;
+		for (int i : array) {
+			if (i == nextToCount) {
+				countResult++;
+			}
+		}
+		return countResult;
+
 	}
 }

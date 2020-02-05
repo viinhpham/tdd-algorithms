@@ -13,22 +13,24 @@ public class PorcupineNumberCheck {
 			if (isPrime(n) && n % 10 == 9) {
 				porcupine = n;
 			}
-
-			//find nex porcupine
-			if (porcupine != 0 ) {
-				while (true) {
-					n++;
-					if (isPrime(n)) {
-						if (n % 10 == 9) {
-							return porcupine;
-						} else {
-							porcupine = 0;
-							break;
-						}
-					}
+			//find next porcupine
+			if (porcupine != 0) {
+				if (hasNextPrimeEndwith9(n)) {
+					return porcupine;
+				} else {
+					porcupine = 0;
 				}
 			}
 			n++;
+		}
+	}
+
+	private boolean hasNextPrimeEndwith9(int n) {
+		while (true) {
+			n++;
+			if (isPrime(n)) {
+				return n % 10 == 9;
+			}
 		}
 	}
 
