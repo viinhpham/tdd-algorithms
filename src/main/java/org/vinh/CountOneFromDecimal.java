@@ -12,6 +12,12 @@ public class CountOneFromDecimal {
 			}
 			n /= 2;
 		}
+		// using for loop
+		/*for (int i = n; i > 0; i /= 2) {
+			if (i % 2 == 1) {
+				count++;
+			}
+		}*/
 		return count;
 	}
 }
