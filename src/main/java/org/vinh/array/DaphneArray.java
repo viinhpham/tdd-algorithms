@@ -13,7 +13,7 @@ public class DaphneArray {
 		//true if it's even
 		boolean isEven = array[0]%2 == 0;
 		//loop from second element
-		//if first element is even and any of remainding items is odd then return 0 immediately.
+		//if first element is even and any of remaining items is odd then return 0 immediately.
 		for (int i = 1; i < length; i++) {
 			if (isEven && array[i] % 2 != 0 || !isEven && array[i] % 2 == 0) {
 				return 0;
