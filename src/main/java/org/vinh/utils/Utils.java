@@ -18,4 +18,17 @@ public class Utils {
 		}
 		return total;
 	}
+	public static boolean isPrime(int number) {
+		if (number <= 0) {
+			return false;
+		}
+		boolean isPrime = true;
+		for (int divider = 2; divider <= number/2; divider++) {
+			if (number % divider == 0) {
+				isPrime = false;
+				break;
+			}
+		}
+		return isPrime;
+	}
 }
