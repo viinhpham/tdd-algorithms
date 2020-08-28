@@ -31,4 +31,14 @@ public class Utils {
 		}
 		return isPrime;
 	}
+
+	public static boolean isExists(int i, int [] array) {
+		boolean result = false;
+		for (int j : array){
+			if (j == i) {
+				return true;
+			}
+		}
+		return result;
+	}
 }
