@@ -15,7 +15,7 @@ public class ContinuousFactor {
 	public int isContinuousFactored(int n) {
 		int recall = n;
 		int j = 2;
-		int condition = n/2;
+		int condition = n / 2;
 		for (int i = 2; i<= condition && n > 1;i++) {
 			if (n % i == 0) {
 				n/=i;
@@ -24,6 +24,31 @@ public class ContinuousFactor {
 				n = recall;
 			}
 		}
+
 		return n == 1 ? 1 : 0;
+		// using dynamic programming
+		/*int recall = n;
+		int j = 2;
+		int condition = n/2;
+		int[] cache = new int[n/2 + 2];
+		for (int i = 2; i<= condition && n > 1;i++) {
+			if (cache[i] != 0) {
+				n/=i;
+				continue;
+			}
+
+			if (n % i == 0) {
+				if (cache[i] == 0) {
+					cache[i] = i;
+				}
+				n/=i;
+			} else {
+				i = j++;
+				n = recall;
+			}
+		}
+		return n == 1 ? 1 : 0;*/
 	}
+
+
 }
