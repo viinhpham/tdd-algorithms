@@ -19,7 +19,7 @@ public class Utils {
 		return total;
 	}
 	public static boolean isPrime(int number) {
-		if (number <= 0) {
+		if (number <= 1) {
 			return false;
 		}
 		boolean isPrime = true;
