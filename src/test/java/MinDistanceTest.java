@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.vinh.AbstractTest;
+import org.vinh.MinDistance;
 
 import static org.junit.jupiter.api.Assertions.*;
 
