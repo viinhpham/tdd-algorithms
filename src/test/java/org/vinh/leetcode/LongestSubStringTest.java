@@ -3,6 +3,7 @@ package org.vinh.leetcode;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.vinh.AbstractTest;
+import org.vinh.leetcode.slidingwindow.LongestSubString;
 
 import static org.junit.jupiter.api.Assertions.*;
 

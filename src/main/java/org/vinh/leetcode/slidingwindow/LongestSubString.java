@@ -1,4 +1,4 @@
-package org.vinh.leetcode;
+package org.vinh.leetcode.slidingwindow;
 
 import java.util.HashMap;
 import java.util.Map;
