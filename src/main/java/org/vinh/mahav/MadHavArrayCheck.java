@@ -3,7 +3,7 @@ package org.vinh.mahav;
 /**
  * Created by vinh.phamquoc on 1/8/20
  */
-public class MahavArrayCheck {
+public class MadHavArrayCheck {
 	public int isMahavArray(int[] array) {
 		if (array.length < 2) {
 			return 0;
@@ -11,15 +11,16 @@ public class MahavArrayCheck {
 		int sum = 0,
 				count = 0,
 				end = 2;
-		boolean isNotMahavLength = false,
+		boolean isMadHavLength = false,
 				isMaha = false;
 
-		for (int k = 1; k <= array.length * 2; k++) {
+		for (int k = 1; k <= array.length; k++) {
 			if (array.length == k * (k + 1) / 2) {
-				isNotMahavLength = true;
+				isMadHavLength = true;
+				break;
 			}
 		}
-		if (!isNotMahavLength) {
+		if (!isMadHavLength) {
 			return 0;
 		}
 
