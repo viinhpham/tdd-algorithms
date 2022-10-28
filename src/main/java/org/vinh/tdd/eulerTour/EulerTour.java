@@ -14,18 +14,19 @@ public abstract class EulerTour<T> {
 	protected void preOrder(Node<T> node, T [] result) {}
 	protected void inOrder(Node<T> node, T [] result) {}
 	protected void postOrder(Node<T> node, T [] result) {}
+	protected abstract void initArray(T[] array);
 
 	public T eulerTour(Node<T> node){
 		var result = (T[]) Array.newInstance(node.value().getClass(), 3);
-		Arrays.fill(result, 0);
-
+		initArray(result);
+		
 		if (Objects.isNull(node.left()) || Objects.isNull(node.right())) {
 			visitExternal(node, result);
 		} else {
 			preOrder(node, result);
-			result[1] = (T) eulerTour(node.left());
+			result[1] = eulerTour(node.left());
 			inOrder(node, result);
-			result[2] = (T) eulerTour(node.right());
+			result[2] = eulerTour(node.right());
 			postOrder(node, result);
 		}
 		return result[0];
