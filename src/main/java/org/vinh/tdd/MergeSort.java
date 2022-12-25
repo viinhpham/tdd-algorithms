@@ -4,7 +4,7 @@ package org.vinh.tdd;
  * Author : Vinh Pham.
  * Date: 12/16/22.
  * Time : 10:27 PM.
- */
+ */////pkoo-
 public class MergeSort {
 	public void sort(int[] array) {
 		var temp = new int[array.length];
@@ -50,6 +50,5 @@ public class MergeSort {
 		for (int l = low; l <= high; l++) {
 			array[l] = temp[l];
 		}
-
 	}
 }
